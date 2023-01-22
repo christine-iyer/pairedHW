@@ -1,4 +1,7 @@
-**[Challenge 1]()**
+
+# Paired Homework Week 26 Day2
+
+**[Challenge 1](https://github.com/christine-iyer/pairedHW/blob/main/Challenge1.js)**
 
 **Navigator:** Rosa / Devon
 
@@ -16,7 +19,7 @@ console.log(addTwo(4))
 </details>
 <br>
 
-**[Challenge 2]()**
+**[Challenge 2](https://github.com/christine-iyer/pairedHW/blob/main/Challenge2.js)**
 
 **Navigator:** Christine/ Devon
 
@@ -24,7 +27,7 @@ console.log(addTwo(4))
 
 <details>
 <summary>
-Create a function addSthat accepts one input and adds an "s" to it.</summary>
+Create a function addS that accepts one input and adds an "s" to it.</summary>
 
 ```
 function addS (word){
@@ -35,13 +38,13 @@ console.log(addS("pizza"))
 </details>
 <br>
 
-**[Challenge 3]()**
+**[Challenge 3](https://github.com/christine-iyer/pairedHW/blob/main/Challenge3.js)**
 
 <details>
 <summary>Create a function called map that takes two inputs:
 an array of numbers (a list of numbers)
 a 'callback' function - a function that is applied to each element of the array (inside of the function 'map')
-Have mapreturn a new array filled with numbers that are the result of using the 'callback' function on each element of the input array.</summary>
+Have map return a new array filled with numbers that are the result of using the 'callback' function on each element of the input array.</summary>
 
 ```
 function multiplyByTwo (num) {
@@ -61,7 +64,7 @@ console.log(test)
 </details>
 <br>
 
-**[Challenge 4]()**
+**[Challenge 4](https://github.com/christine-iyer/pairedHW/blob/main/Challenge4.js)**
 
 **Navigator:** Christine/Rosa
 **Driver:** Devon
@@ -87,17 +90,19 @@ console.log(alphabet);
 </details>
 <br>
 
-**[Challenge 5]()**
+**[Challenge 5](https://github.com/christine-iyer/pairedHW/blob/main/Challenge5/Challenge5.js)**
 
 **Navigator:** Devon/ Rosa
 **Driver:** Christine
 
 <details>
-<summary>Construct a json api with the ExpressJS Framework. You will not use a database. You will mock a database of blogposts in a seperate JS file with the following starter data ***Do in Python if you can with flask***
+<summary>Construct a json api with the ExpressJS Framework. You will not use a database. You will mock a database of blog posts in a seperate JS file with the following starter data.
 </summary>
 
+seed.js
 
-```const mockBlog = [
+```
+const mockBlog = [
     {
         id: 1,
         title: 'First Blog Post',
@@ -145,11 +150,28 @@ app.listen(3008,() => {
      console.log("I hear you on this port 3008")
 })
 ```
+blogSchema.js
+
+```
+const {model ,Schema, default: mongoose}= require('mongoose')
+const blogSchema = new Schema({
+     id: {type: String},
+     title: {type: String, required:true},
+     description: {type: String, required:true}
+})
+
+const Blog = mongoose.model('Blog',blogSchema)
+module.exports = Blog
+
+
+```
+
+
 </details>
 
-**Test Routes in Postman**
+<br>
 
-**[]()**
+**[Test Routes in Postman](https://github.com/christine-iyer/pairedHW/tree/main/Challenge5/images)**
 <details>
      <summary>Create</summary>
 
